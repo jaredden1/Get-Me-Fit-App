@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Workout: <%= workout.workType %></div>
+    <div>Note: <%= workout.workNote %></div>
+    <div>Date: <%= workout.workDate %></div>
+</section>
+<br>
+<h2>Workout Set</h2>
+<br>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Weight</th>
+            <th>Reps</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (let stat of stats) { %>
+            <tr>
+            <td><%= stat.type %></td>    
+            <td><%= stat.weight %></td>    
+            <td><%= stat.reps %></td>    
+            <td><%= stat.notes %></td>    
+            </tr>
+         <% } %> 
+    </tbody>
+    <a href="/workouts/<%= workout._id %>/stats/new">
+        <button type="submit">Create New Set</button>
+    </a>
+</table>
+
+<%- include('../partials/footer') %>
