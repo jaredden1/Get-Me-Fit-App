@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<h2>Workout Log</h2>
+<table>
+<thead>
+    <tr>
+        <th>Workout</th>
+        <th>Workout Notes</th>
+        <th>Date</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    <% workouts.forEach(f=>{ %>
+    <tr>
+      <td><%= f.workType %></td>  
+      <td><%= f.workNote %></td>  
+      <td><%= f.workDate %></td>  
+      <td><a href="/workouts/<%= f._id %>">SELECT</a></td>
+    </tr>
+    <% })%>
+</tbody>
+</table>
+
+<%- include('../partials/footer') %>

@@ -20,7 +20,7 @@ const workoutSchema = new Schema({
   },
 }, 
 {
-timestamps: true;
+timestamps: true
 }
 
 );
