@@ -8,7 +8,7 @@ require('dotenv').config();
 require('./config/database')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/workouts');
+var workoutsRouter = require('./routes/workouts');
 
 var app = express();
 
