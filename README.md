@@ -4,9 +4,10 @@ Fitness app that allows user to record individual workouts.
 Secondary use will be user referencing past workouts to gauge progress. 
 
 # Screenshot
-
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
+![Alt text](image-2.png)
+![Alt text](image-1.png)
+![Alt text](image-3.png)
+![Alt text](image-4.png)
 
 # Technologies Used
 
