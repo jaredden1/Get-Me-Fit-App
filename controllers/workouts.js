@@ -6,7 +6,10 @@ module.exports = {
   show,
   index,
   create,
-  delete: deleteWorkout
+  delete: deleteWorkout,
+  edit: editWorkout,
+  update
+
 };
 
 function newWorkout(req, res) {
@@ -54,4 +57,36 @@ async function deleteWorkout(req, res) {
     console.log(err)
     res.render("/workouts", { title: "New Workout", errorMsg: err.message });
   }
+
+}
+
+async function editWorkout(req, res) {
+  try {
+    const editedWorkout = await Workout.updateOne(Workout.findById(req.params.id));
+    
+    res.render("workouts/edit", { title: "Edit Workout", editedWorkout})
+  } catch (err) {
+    console.log(err)
+    const workouts = await Workout.find({});
+    res.render("workouts/index", { title: "New Workout", errMsg: err.message, workouts: workouts});
+  }
+}
+
+async function update(req, res) {
+  try {
+    const workoutData = { ...req.body }
+
+    const editedWorkout = await Workout.findById(req.params.id)
+    editedWorkout.type = workoutData.type
+    editedWorkout.weight = workoutData.weight
+    editedWorkout.reps = workoutData.reps
+    editedWorkout.notes = workoutData.notes
+    await editedWorkout.save()
+
+    res.redirect(`/workouts/${req.params.id}`, editedWorkout)
+    
+  } catch (err) {
+    console.log(err)
+  }
+
 }

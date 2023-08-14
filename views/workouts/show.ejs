@@ -12,6 +12,7 @@
 <table>
   <thead>
     <tr>
+      <th> ID </th>
       <th>Type</th>
       <th>Weight</th>
       <th>Reps</th>
@@ -21,10 +22,12 @@
   <tbody>
     <% for (let stat of stats) { %>
     <tr>
+      <td><%= stat._id %></td>
       <td><%= stat.type %></td>
       <td><%= stat.weight %> </td>
       <td><%= stat.reps %></td>
       <td><%= stat.notes %></td>
+      <td><a href="/workouts/<%= stat._id %>/edit">Edit Workout</a>
     </tr>
     <% } %>
   </tbody>
