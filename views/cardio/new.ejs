@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+<h1>Add Cardio Workout</h1>
+<form action="/cardio" method="POST">
+  <label for="activity">Activity: </label>
+  <select name="activity" required>
+    <option value="" disabled selected>Select Activity</option>
+    <option value="Running">Running</option>
+    <option value="Cycling">Cycling</option>
+    <option value="Jump Rope">Jump Rope</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Treadmill">Treadmill</option>
+    <option value="Stair Master">Stair Master</option>
+    <option value="Elliptical">Elliptical</option>
+    <!-- Add other activity options here -->
+  </select>
+  <br>
+  <label for="duration">Duration (minutes): </label>
+  <select name="duration" required>
+    <option value="" disabled selected>Select Duration</option>
+    <option value="15">15 minutes</option>
+    <option value="30">30 minutes</option>
+    <option value="45">45 minutes</option>
+    <option value="60">60 minutes</option>
+    <!-- Add other duration options here -->
+  </select>
+  <br>
+  <label for="distance">Distance (optional): </label>
+  <select name="distance">
+    <option value="">No Distance</option>
+    <option value="1">1 mile</option>
+    <option value="2">2 miles</option>
+    <option value="3">3 miles</option>
+    <option value="4">4 miles</option>
+    <option value="5">5 miles</option>
+    <!-- Add other distance options here -->
+  </select>
+  <br>
+  <label for="workDate">Date: </label>
+  <input type="datetime-local" name="workDate">
+  <br>
+  <input type="submit" value="Add Cardio Workout" />
+</form>
+
+<%- include('../partials/footer') %>

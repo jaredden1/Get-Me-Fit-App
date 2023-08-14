@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>
 
-<h2>Create Your Workout</h2>
+<h2>Create Your Workout Routine</h2>
 <form action="/workouts" method="POST">
 <label>Exercise:
     <select name="workType">
-        <option value="SELECT EXERCISE"></option>
+        <option value="">SELECT EXERCISE</option>
         <option value="chest">Chest</option>
         <option value="back">Back</option>
         <option value="arms">Arms</option>
@@ -12,6 +12,7 @@
         <option value="legs">Legs</option>
         <option value="core">Core</option>
         <option value="full body">Full Body</option>
+        <!-- Add other training options here -->
      </select>
 </label>
 <br>
@@ -24,7 +25,5 @@
     <button type="submit">Create Workout</button>
 </form>
 <p><%= errorMsg %></p>
-
-
 
 <%- include('../partials/footer') %>
