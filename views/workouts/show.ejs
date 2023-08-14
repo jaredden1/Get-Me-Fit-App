@@ -3,7 +3,7 @@
 <section id="show-page">
   <div>Workout: <%= workout.workType %></div>
   <div>Notes: <%= workout.workNote %></div>
-  <div>Date: <%= workout.workDate %></div>
+  <div>Date: <%= workout.workDate.toLocaleDateString() %></div>
 </section>
 <br>
 <h2>Workout Set</h2>

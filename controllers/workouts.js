@@ -6,6 +6,7 @@ module.exports = {
   show,
   index,
   create,
+  delete: deleteWorkout
 };
 
 function newWorkout(req, res) {
@@ -42,5 +43,15 @@ async function index(req, res) {
     res.render("workouts/index", { title: "Workout List", workouts: workouts });
   } catch (err) {
     res.send(err);
+  }
+}
+
+async function deleteWorkout(req, res) {
+  try {
+    await Workout.deleteOne(Workout.findById(req.params.id));
+    res.redirect("/workouts");
+  } catch (err) {
+    console.log(err)
+    res.render("/workouts", { title: "New Workout", errorMsg: err.message });
   }
 }
