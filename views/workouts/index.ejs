@@ -8,6 +8,7 @@
       <th>Workout Notes</th>
       <th>Date</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -15,8 +16,10 @@
     <tr>
       <td><%= f.workType %></td>
       <td><%= f.workNote %></td>
-      <td><%= f.workDate %></td>
+      <td><%= f.workDate.toLocaleDateString() %></td>
       <td><a href="/workouts/<%= f._id %>">SELECT</a></td>
+      <td><form action="workouts/<%=f._id%>?_method=DELETE" class="delete-form" method="POST">
+        <button type="submit">Delete Entry</button></form></td>
     </tr>
     <% })%>
   </tbody>
