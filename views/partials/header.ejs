@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+        <body>
+            <% if (title !== 'Get Me Fit') { %>
+            <nav>
+                <% if (title === 'Cardio List') { %>
+                    <a href="/">Get Me Fit</a> |
+                    <a href="/cardio/new">Add Cardio</a>
+                <% } else if (title === 'Workout List') { %>
+                    <a href="/">Get Me Fit</a> |
+                    <a href="/workouts/new">Add Workout</a>
+                <% } else { %>
+                    <a href="/">Get Me Fit</a> |
+                    <a href="/cardio/new">Add Cardio</a> |
+                    <a href="/workouts/new">Add Workout</a>
+                <% } %>
+            </nav>
+            <% } %>
