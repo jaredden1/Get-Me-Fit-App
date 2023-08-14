@@ -4,8 +4,8 @@ const Stat = require("../models/stat");
 module.exports = {
   new: newWorkout,
   show,
-  create,
   index,
+  create,
 };
 
 function newWorkout(req, res) {
@@ -16,7 +16,7 @@ async function show(req, res) {
   try {
     const workout = await Workout.findById(req.params.id);
     const stats = await Stat.find({ workout: workout._id });
-    res.render("workouts/show", { title: "Workout Details", workout, stats });
+    res.render("workouts/show", { title: "Workout Detail", workout, stats });
   } catch (err) {
     console.log(err);
   }
@@ -33,7 +33,7 @@ async function create(req, res) {
     console.log(err);
     res.render("/workout/new", { title: "New Workout", errorMsg: err.message });
   }
-  console.log("this is a request body", req.body);
+  console.log("This is the request body: ", req.body);
 }
 
 async function index(req, res) {
