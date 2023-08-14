@@ -2,6 +2,28 @@
 
 <h1> Edit </h1>
 
-Add some words
+<form action="/workouts/<%= editedWorkout._id %>?_method=PUT" method="POST">
 
-More words
+<label> Type:
+    <input type="text" name="type" value="<%= editedWorkout.type %>">
+</label><br>
+<label> Weight:
+    <input type="text" name="weight" value="<%= editedWorkout.weight %>">
+</label><br>
+<label> Reps:
+    <input type="number" name="reps" value="<%= editedWorkout.reps %>">
+</label><br>
+<label> Notes:
+    <input type="text" name="notes" value="<%= editedWorkout.notes %>">
+</label><br>
+
+<button type="submit">Submit Changes</button>
+
+
+
+
+
+</form>
+
+
+<% include('../partials/footer') %>

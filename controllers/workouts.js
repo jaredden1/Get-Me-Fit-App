@@ -62,8 +62,9 @@ async function deleteWorkout(req, res) {
 
 async function editWorkout(req, res) {
   try {
-    await Workout.updateOne(Workout.findById(req.params.id));
-    res.render("workouts/edit", { title: "Edit Workout"})
+    const editedWorkout = await Workout.updateOne(Workout.findById(req.params.id));
+    
+    res.render("workouts/edit", { title: "Edit Workout", editedWorkout})
   } catch (err) {
     console.log(err)
     const workouts = await Workout.find({});
@@ -82,7 +83,7 @@ async function update(req, res) {
     editedWorkout.notes = workoutData.notes
     await editedWorkout.save()
 
-    res.redirect(`/workouts/${req.params.id}`)
+    res.redirect(`/workouts/${req.params.id}`, editedWorkout)
     
   } catch (err) {
     console.log(err)
