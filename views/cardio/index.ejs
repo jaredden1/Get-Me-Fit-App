@@ -12,18 +12,14 @@
   </thead>
   <tbody>
     <% cardioList.forEach(cardio => { %>
-      <tr>
-        <td><%= cardio.activity %></td>
-        <td><%= cardio.duration %> minutes</td>
-        <td><%= cardio.distance ? cardio.distance + ' miles' : 'N/A' %></td>
-        <td><%= cardio.createdAt.toLocaleString() %></td>
-      </tr>
+    <tr>
+      <td><%= cardio.activity %></td>
+      <td><%= cardio.duration %> minutes</td>
+      <td><%= cardio.distance ? cardio.distance + ' miles' : 'N/A' %></td>
+      <td><%= cardio.createdAt.toLocaleString() %></td>
+    </tr>
     <% }) %>
   </tbody>
 </table>
 
 <%- include('../partials/footer') %>
-
-
-
-
