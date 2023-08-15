@@ -9,7 +9,7 @@
     <option value="Flat">Flat Bench Press</option>
     <option value="Decline">Decline Bench Press</option>
     <option value="Dumbbell">Dumbbell Press</option>
-    <option value="Cable">Cable Flys</option>
+    <option value="Cable">Cable Fly</option>
     <option value="Pushups">Pushups</option>
   </select>
   <br />
@@ -50,6 +50,8 @@
   <input type="text" name="notes"/>
   <br />
   <input type="submit" value="Add Set" />
+  <input type="hidden" name="entryId" value="<%= workoutId %>">
 </form>
+PARENT ID = <%= workoutId %>
 
 <%- include('../partials/footer') %>

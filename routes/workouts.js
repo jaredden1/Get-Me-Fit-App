@@ -9,8 +9,8 @@ router.get("/:id", workoutCtrl.show);
 router.get("/:id/edit", workoutCtrl.edit)
 
 router.post("/", workoutCtrl.create);
-router.delete("/:id", workoutCtrl.delete)
 
+router.delete("/:id", workoutCtrl.delete)
 
 router.put("/:id", workoutCtrl.update)
 

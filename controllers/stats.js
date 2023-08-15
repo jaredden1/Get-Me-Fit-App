@@ -21,7 +21,8 @@ async function create(req, res, next) {
         weight: req.body.weight,
         reps: req.body.reps,
         notes: req.body.notes,
-        workout: req.params.id,
+        entryId: req.body.entryId,
+        workout: req.params.id
       };
       await Stat.create(newStat);
       res.redirect(`/workouts/${req.params.id}`);

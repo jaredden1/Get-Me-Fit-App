@@ -1,0 +1,16 @@
+<h1>EDIT CARDIO PAGE</h1>
+<br>
+
+<form action="/cardio/<%= editedCardio._id %>?_method=PUT" method="POST">
+
+    <label> Activity:
+        <input type="text" name="activity" value="<%= editedCardio.activity %>">
+    </label><br>
+    <label> Duration:
+        <input type="text" name="duration" value="<%= editedCardio.duration %>">
+    </label><br>
+    <label> Distance:
+        <input type="number" name="distance" value="<%= editedCardio.distance %>">
+    </label><br>
+    
+    <button type="submit">Submit Changes</button>
