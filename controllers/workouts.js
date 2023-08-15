@@ -31,6 +31,7 @@ async function create(req, res) {
     if (req.body[key] === "") delete req.body[key];
   }
   try {
+    console.log(req.body)
     await Workout.create(req.body);
     res.redirect("/workouts");
   } catch (err) {
@@ -62,28 +63,31 @@ async function deleteWorkout(req, res) {
 
 async function editWorkout(req, res) {
   try {
-    const editedWorkout = await Workout.updateOne(Workout.findById(req.params.id));
-    
+    const workout = await Workout.findById(req.params.id)
+    const editedWorkout = await Stat.findById(req.params.id);
     res.render("workouts/edit", { title: "Edit Workout", editedWorkout})
   } catch (err) {
     console.log(err)
     const workouts = await Workout.find({});
-    res.render("workouts/index", { title: "New Workout", errMsg: err.message, workouts: workouts});
+    res.render("workouts/index", { title: "New Workout", editedWorkout});
   }
 }
 
 async function update(req, res) {
   try {
     const workoutData = { ...req.body }
-
-    const editedWorkout = await Workout.findById(req.params.id)
+    console.log(workoutData)
+    const workouts = await Workout.find({});
+    console.log(workouts)
+    const editedWorkout = await Stat.findById(req.params.id)
     editedWorkout.type = workoutData.type
     editedWorkout.weight = workoutData.weight
     editedWorkout.reps = workoutData.reps
     editedWorkout.notes = workoutData.notes
+    editedWorkout.entryId = workoutData.entryId
     await editedWorkout.save()
 
-    res.redirect(`/workouts/${req.params.id}`, editedWorkout)
+    res.redirect(`/workouts/${workoutData.entryId}`)
     
   } catch (err) {
     console.log(err)

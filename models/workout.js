@@ -5,7 +5,7 @@ const workoutSchema = new mongoose.Schema(
   {
     workType: {
       type: String,
-      enum: ["chest", "core", "legs", "shoulders", "arms", "back", "full body"],
+      enum: ["Chest", "Core", "Legs", "Shoulders", "Arms", "Back", "Full Body"],
       required: true,
     },
     workNote: {
@@ -19,6 +19,10 @@ const workoutSchema = new mongoose.Schema(
         return newDate;
       },
     },
+    workId: {
+      type: Number,
+      default: Math.floor(Math.random() * 1000000),
+    }
   },
   {
     timestamps: true,

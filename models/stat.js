@@ -21,11 +21,14 @@ const statSchema = new Schema(
       notes: {
         type: String,
         required: false,
+    },
+      entryId: {
+        type: String,
       },
       workout: {
         type: Schema.Types.ObjectId,
         ref: "Workout",
-      },
+    },
     },
     {
       timestamps: true,

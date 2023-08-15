@@ -1,6 +1,6 @@
 <% include('../partials/header') %>
 
-<h1> Edit </h1>
+<h2>Update Set:</h2>
 
 <form action="/workouts/<%= editedWorkout._id %>?_method=PUT" method="POST">
 
@@ -16,6 +16,7 @@
 <label> Notes:
     <input type="text" name="notes" value="<%= editedWorkout.notes %>">
 </label><br>
+<input type="hidden" name="entryId" value="<%= editedWorkout.entryId %>">
 
 <button type="submit">Submit Changes</button>
 
