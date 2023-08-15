@@ -22,9 +22,15 @@ const workoutSchema = new mongoose.Schema(
     workId: {
       type: Number,
       default: Math.floor(Math.random() * 1000000),
-    }
-  },
-  {
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+    userName: String,
+    userAvatar: String
+  }, {
     timestamps: true,
   }
 );

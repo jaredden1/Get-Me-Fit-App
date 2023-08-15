@@ -18,9 +18,10 @@ function newWorkout(req, res) {
 
 async function show(req, res) {
   try {
+    const user = req.user
     const workout = await Workout.findById(req.params.id);
     const stats = await Stat.find({ workout: workout._id });
-    res.render("workouts/show", { title: "Workout Detail", workout, stats });
+    res.render("workouts/show", { title: "Workout Detail", workout, stats, user });
   } catch (err) {
     console.log(err);
   }
@@ -30,6 +31,11 @@ async function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === "") delete req.body[key];
   }
+
+  req.body.user = req.user._id;
+  req.body.userName = req.user.name;
+  req.body.userAvatar = req.user.avatar;
+
   try {
     console.log(req.body)
     await Workout.create(req.body);

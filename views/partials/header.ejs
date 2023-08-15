@@ -5,18 +5,28 @@
         <link rel='stylesheet' href='/stylesheets/style.css' />
     </head>
         <body>
+
+        <% if (user) { %>
+
             <% if (title !== 'Get Me Fit') { %>
             <nav>
                 <% if (title === 'Cardio List') { %>
-                    <a href="/">Get Me Fit</a> |
-                    <a href="/cardio/new">Add Cardio</a>
+                    <a href="/">Start New Workout</a> |
+                    <a href="/cardio/new">Add Cardio</a> |
+                    <a href="/logout">LOG OUT</a>
                 <% } else if (title === 'Workout List') { %>
-                    <a href="/">Get Me Fit</a> |
-                    <a href="/workouts/new">Add Weight Training</a>
+                    <a href="/">Start New Workout</a> |
+                    <a href="/workouts/new">Add Weight Training</a> |
+                    <a href="/logout">LOG OUT</a>
                 <% } else { %>
-                    <a href="/">Get Me Fit</a> |
+                    <a href="/">Start New Workout</a> |
                     <a href="/cardio/new">Add Cardio Workout</a> |
-                    <a href="/workouts/new">Add Weight Training</a>
+                    <a href="/workouts/new">Add Weight Training</a> |
+                    <a href="/logout">LOG OUT</a>
                 <% } %>
             </nav>
             <% } %>
+
+        <% } else { %>
+            <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+  <% } %>
