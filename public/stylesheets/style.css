@@ -277,9 +277,9 @@ label {
 }
 
 #show-page {
-  background-color: rgba(232, 222, 222, 0.244);
+  background-color: rgba(200, 198, 198, 0.244);
   padding: 1%;
-  margin: 50px;
+  margin: 75px;
 }
 
 /* FORMS DROPDOWNS */
@@ -383,6 +383,155 @@ label {
   outline: 2px solid orange;
 }
 
+.set-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.set-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.set-select,
+.set-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  margin: 0 auto;
+  height: 40px; 
+  appearance: none; 
+}
+
+.set-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.set-button:hover {
+  background-color: #f4a507;
+}
+
+.set-select:focus, .set-input:focus {
+  outline: 2px solid orange;
+}
+
+.cardio-edit-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cardio-edit-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.cardio-edit-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  height: 40px; 
+  appearance: none; 
+}
+
+.cardio-edit-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.cardio-edit-button:hover {
+  background-color: #f4a507;
+}
+
+.cardio-edit-input:focus {
+  outline: 2px solid orange;
+}
+
+.set-update-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.set-update-label {
+  display: block;
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.set-update-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  height: 40px; 
+  appearance: none; 
+}
+
+.set-update-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.set-update-button:hover {
+  background-color: #f4a507;
+}
+
+.set-update-input:focus {
+  outline: 2px solid orange;
+}
+
 /* Delete button with trash can icon */
 
 .del-button {
@@ -442,64 +591,4 @@ a:hover {
 
 tbody {
   background-color: rgb(255, 255, 255, .4);
-}
-
-
-
-
-
-
-
-
-
-
-.set-form {
-  background-color: rgb(255, 255, 255, .3); 
-  padding: 30px;
-  max-width: 50%;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.set-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: black;
-  font-size: 20px;
-}
-
-.set-select,
-.set-input {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  margin: 8px 0;
-  margin: 0 auto;
-  height: 40px; 
-  appearance: none; 
-}
-
-.set-button {
-  padding: 10px 20px;
-  background-color: rgb(138, 203, 77);
-  border: none;
-  border-radius: 4px;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.set-button:hover {
-  background-color: #f4a507;
-}
-
-.set-select:focus, .set-input:focus {
-  outline: 2px solid orange;
 }

@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
 
-<h1 class="edit-cardio">Edit Cardio</h1>
-<br>
+<h1 class="edit-cardio">Update Cardio</h1>
 
-<form action="/cardio/<%= editedCardio._id %>?_method=PUT" method="POST">
+<form action="/cardio/<%= editedCardio._id %>?_method=PUT" method="POST" class="cardio-edit-form">
 
-    <label> Activity:
-        <input type="text" name="activity" value="<%= editedCardio.activity %>">
+    <label class="cardio-edit-label"> Activity:
+        <input type="text" name="activity" class="cardio-edit-input" value="<%= editedCardio.activity %>">
     </label><br>
-    <label> Duration:
-        <input type="text" name="duration" value="<%= editedCardio.duration %>">
+    <label class="cardio-edit-label"> Duration:
+        <input type="number" min="0" name="duration" class="cardio-edit-input" value="<%= editedCardio.duration %>">
     </label><br>
-    <label> Distance:
-        <input type="number" name="distance" value="<%= editedCardio.distance %>">
+    <label class="cardio-edit-label"> Distance:
+        <input type="number" min="0" name="distance" class="cardio-edit-input" value="<%= editedCardio.distance %>">
     </label><br>
     
-    <button type="submit">Submit Changes</button>
+    <button type="submit" class="cardio-edit-button">Submit Changes</button>
+</form>
 
     <%- include('../partials/footer') %>
