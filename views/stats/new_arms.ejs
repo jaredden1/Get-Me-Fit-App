@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>
 
-<h1>Add Set Info</h1>
-<form action="/workouts/<%= workoutId %>" method="POST">
+<h1 class="add-set">Add Set info</h1>
+<form action="/workouts/<%= workoutId %>" method="POST" class="set-form">
 
-  <label for="type">Type: </label>
-  <select name="type" required>
+  <label for="type" class="set-label">Type: </label>
+  <select name="type" class="set-select" required>
     <option value="" disabled selected>Select Type</option>
     <option value="Standing Bicep Curls">Standing Bicep Curls</option>
     <option value="Seated Bicep Curls">Seated Bicep Curls</option>
@@ -15,8 +15,8 @@
     <option value="Barbell Skull Crusher">Barbell Skull Crusher</option>
   </select>
   <br />
-  <label for="weight">Weight: </label>
-  <select name="weight" required>
+  <label for="weight" class="set-label">Weight: </label>
+  <select name="weight" class="set-select" required>
     <option value="" disabled selected>Select Weight</option>
     <option value="5">5 lbs</option>
     <option value="10">10 lbs</option>
@@ -51,8 +51,8 @@
     <!-- Add other weight options here -->
   </select>
   <br />
-  <label for="reps">Reps: </label>
-  <select name="reps" required>
+  <label for="reps" class="set-label">Reps: </label>
+  <select name="reps" class="set-select" required>
     <option value="" disabled selected>Select Reps</option>
     <option value="5">5</option>
     <option value="10">10</option>
@@ -63,10 +63,10 @@
     <!-- Add other reps options here -->
   </select>
   <br />
-  <label for="notes">Set Notes: </label>
-  <input type="text" name="notes"/>
+  <label for="notes" class="set-label">Set Notes: </label>
+  <input type="text" name="notes" class="set-input" placeholder="Notes"/>
   <br />
-  <input type="submit" value="Add Set" />
+  <input type="submit" value="Add Set" class="set-button" />
   <input type="hidden" name="entryId" value="<%= workoutId %>">
 </form>
 
