@@ -17,8 +17,10 @@
 }
 
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* padding: 50px; */
+  font: 14px Helvetica, Arial, sans-serif;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,21 +30,11 @@ body {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  font-size: 125px;
-  font-family: Magz;
-  color: rgb(255, 255, 255);
-  text-shadow: #f4a507 5px 3px 2px;
-}
-
-p {
-  text-align: center;
-}
-
 img {
   border-radius: 30px;
 }
+
+/* ALL BUTTONS */
 
 .center-buttons {
   display: flex;
@@ -83,6 +75,12 @@ img {
   height: 100%;
 }
 
+.del-button {
+  color: #f4a507;
+}
+
+/* FOOTER */
+
 .foot-state {
   display: flex;
   justify-content: center;
@@ -110,6 +108,16 @@ img {
   font-weight: 600;
   text-align: center;
   color: #f4a507
+}
+
+/* ALL HEADERS */
+
+h1 {
+  text-align: center;
+  font-size: 125px;
+  font-family: Magz;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
 }
 
 .add-cardio {
@@ -152,6 +160,26 @@ img {
   text-shadow: #f4a507 5px 3px 2px;
 }
 
+.edit-cardio {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.update-set {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
 .work-list {
   text-align: center;
   font-size: 85px;
@@ -171,6 +199,8 @@ img {
   color: rgb(255, 255, 255);
   text-shadow: #f4a507 5px 3px 2px;
 }
+
+/* NAV BAR */
 
 nav {
   background-color: rgb(243, 146, 71, .9);
@@ -198,45 +228,79 @@ nav > a {
   padding: 10px;
 }
 
+/* OTHER */
+
 label {
   color: white;
 }
 
 table {
   background-color: rgba(232, 222, 222, 0.244);
-  padding: 3%;
+  padding: 1%;
 }
 
 #show-page {
   background-color: rgba(232, 222, 222, 0.244);
-  padding: 6%;
+  padding: 1%;
+  margin: 50px;
 }
 
-#new {
-  background-color: rgba(232, 222, 222, 0.244);
-  padding: 6%;
-}
-
-/* thead {
+thead {
   background-color: rgb(138, 203, 77);
-} */
+}
 
 tbody {
   background-color: white;
 }
 
-form {
-  background-color: rgba(232, 222, 222, 0.244);
-  padding: 1%;
-} 
+/* FORMS */
 
-ul {
-  background-color: rgba(232, 222, 222, 0.244);
-  padding: 3%;
-  
-} 
+.workout-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
 
-li {
-  background-color: rgb(236, 156, 93);
-  background-color: rgb(178, 174, 174);
+.workout-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.workout-select, .workout-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  height: 40px; 
+  appearance: none; 
+}
+
+.workout-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.workout-button:hover {
+  background-color: #f4a507;
+}
+
+.workout-select:focus, .workout-input:focus {
+  outline: 2px solid orange;
+ 
 }

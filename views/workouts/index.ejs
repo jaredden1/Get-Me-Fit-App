@@ -24,7 +24,7 @@
           <td><%= f.workDate.toLocaleDateString() %></td>
           <td><a href="/workouts/<%= f._id %>">SELECT</a></td>
           <td><form action="/workouts/<%=f._id%>?_method=DELETE" class="delete-form" method="POST">
-            <button type="submit">Delete Workout</button></form></td>
+            <button class="del-button" type="submit">Delete Workout</button></form></td>
         </tr>
       <% } else {} %>
 
