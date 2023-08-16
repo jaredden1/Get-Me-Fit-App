@@ -8,7 +8,7 @@ router.get("/workouts/:id/stats/new_legs", statCtrl.newLegs);
 router.get("/workouts/:id/stats/new_shoulders", statCtrl.newShoulders);
 router.get("/workouts/:id/stats/new_arms", statCtrl.newArms);
 router.get("/workouts/:id/stats/new_back", statCtrl.newBack);
-router.get("/workouts/:id/stats/new_full", statCtrl.newFull);
+router.get("/workouts/:id/stats/new_body", statCtrl.newBody);
 
 router.post("/workouts/:id", statCtrl.create);
 

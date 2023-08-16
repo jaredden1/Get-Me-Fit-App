@@ -8,7 +8,7 @@ module.exports = {
   newShoulders,
   newArms,
   newBack,
-  newFull,
+  newBody,
   create,
 };
 
@@ -60,9 +60,9 @@ function newBack(req, res, next) {
   });
 }
 
-function newFull(req, res, next) {
+function newBody(req, res, next) {
   const workoutId = req.params.id;
-  res.render("stats/new_full", {
+  res.render("stats/new_body", {
     title: "Add Stat",
     workoutId,
   });
