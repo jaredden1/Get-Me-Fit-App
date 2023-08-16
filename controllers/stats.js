@@ -2,13 +2,67 @@ const Workout = require("../models/workout");
 const Stat = require("../models/stat");
 
 module.exports = {
-  new: newStat,
+  newChest,
+  newCore,
+  newLegs,
+  newShoulders,
+  newArms,
+  newBack,
+  newFull,
   create,
 };
 
-function newStat(req, res, next) {
+function newChest(req, res, next) {
   const workoutId = req.params.id;
-  res.render("stats/new", {
+  res.render("stats/new_chest", {
+    title: "Add Stat",
+    workoutId,
+  });
+}
+
+function newCore(req, res, next) {
+  const workoutId = req.params.id;
+  res.render("stats/new_core", {
+    title: "Add Stat",
+    workoutId,
+  });
+}
+
+function newLegs(req, res, next) {
+  const workoutId = req.params.id;
+  res.render("stats/new_legs", {
+    title: "Add Stat",
+    workoutId,
+  });
+}
+
+function newShoulders(req, res, next) {
+  const workoutId = req.params.id;
+  res.render("stats/new_shoulders", {
+    title: "Add Stat",
+    workoutId,
+  });
+}
+
+function newArms(req, res, next) {
+  const workoutId = req.params.id;
+  res.render("stats/new_arms", {
+    title: "Add Stat",
+    workoutId,
+  });
+}
+
+function newBack(req, res, next) {
+  const workoutId = req.params.id;
+  res.render("stats/new_back", {
+    title: "Add Stat",
+    workoutId,
+  });
+}
+
+function newFull(req, res, next) {
+  const workoutId = req.params.id;
+  res.render("stats/new_full", {
     title: "Add Stat",
     workoutId,
   });

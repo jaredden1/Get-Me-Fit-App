@@ -29,8 +29,40 @@
     </tr>
     <% } %>
   </tbody>
-  <a href="/workouts/<%= workout._id %>/stats/new">
+
+  <% if (workout.workType === "Chest") { %>
+  <a href="/workouts/<%= workout._id %>/stats/new_chest">
     <button type="submit">Create New Workout</button></a>
+
+  <% } else if (workout.workType === "Core") { %>
+  <a href="/workouts/<%= workout._id %>/stats/new_core">
+    <button type="submit">Create New Workout</button></a>
+
+  <% } else if (workout.workType === "Legs") { %>
+  <a href="/workouts/<%= workout._id %>/stats/new_legs">
+    <button type="submit">Create New Workout</button></a>
+
+  <% } else if (workout.workType === "Shoulders") { %>
+  <a href="/workouts/<%= workout._id %>/stats/new_shoulders">
+    <button type="submit">Create New Workout</button></a>
+
+  <% } else if (workout.workType === "Arms") { %>
+  <a href="/workouts/<%= workout._id %>/stats/new_arms">
+    <button type="submit">Create New Workout</button></a>
+
+  <% } else if (workout.workType === "Back") { %>
+  <a href="/workouts/<%= workout._id %>/stats/new_back">
+    <button type="submit">Create New Workout</button></a>
+
+  <% } else if (workout.workType === "Full") { %>
+  <a href="/workouts/<%= workout._id %>/stats/new_full">
+    <button type="submit">Create New Workout</button></a>
+
+  <% } %>
+
+
+
+
 </table>
 
 <%- include('../partials/footer') %>
