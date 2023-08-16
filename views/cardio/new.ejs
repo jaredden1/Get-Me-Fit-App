@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
 <h1 class="add-cardio">Add Cardio</h1>
-<form action="/cardio" method="POST">
-  <label for="activity">Activity: </label>
-  <select name="activity" required>
+<form action="/cardio" method="POST" class="cardio-form">
+  <label for="activity" class="cardio-label">Activity: </label>
+  <select name="activity" class="cardio-select" required>
     <option value="" disabled selected>Select Activity</option>
     <option value="Running">Running</option>
     <option value="Cycling">Cycling</option>
@@ -15,8 +15,8 @@
     <!-- Add other activity options here -->
   </select>
   <br>
-  <label for="duration">Duration (minutes): </label>
-  <select name="duration" required>
+  <label for="duration" class="cardio-label">Duration (minutes): </label>
+  <select name="duration" class="cardio-select" required>
     <option value="" disabled selected>Select Duration</option>
     <option value="15">15 minutes</option>
     <option value="30">30 minutes</option>
@@ -25,8 +25,8 @@
     <!-- Add other duration options here -->
   </select>
   <br>
-  <label for="distance">Distance (optional): </label>
-  <select name="distance">
+  <label for="distance" class="cardio-label">Distance (optional): </label>
+  <select name="distance" class="cardio-select">
     <option value="">No Distance</option>
     <option value="1">1 mile</option>
     <option value="2">2 miles</option>
@@ -36,10 +36,10 @@
     <!-- Add other distance options here -->
   </select>
   <br>
-  <label for="workDate">Date: </label>
-  <input type="datetime-local" name="workDate">
+  <label for="workDate" class="cardio-label">Date: </label>
+  <input type="datetime-local" name="workDate" class="cardio-input">
   <br>
-  <input type="submit" value="Add Cardio Workout" />
+  <input type="submit" value="Add Cardio Workout" class="cardio-button" />
 </form>
 
 <%- include('../partials/footer') %>
