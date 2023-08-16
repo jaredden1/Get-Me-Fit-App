@@ -1,9 +1,14 @@
 <<<<<<< Updated upstream
 # Get Me Fit
 
+<<<<<<< Updated upstream
 Fitness app that allows user to record individual workouts. The user may choose between cardio or strength training workouts. The user will have the abillity to customize their workouts to achieve their fitness goals.
 Secondary use will be user referencing past workouts to gauge progress.
 
+=======
+Fitness app that allows user to record individual workouts. The user may choose between cardio or strength training workouts. The user will have the ability to customize their workouts to achieve their fitness goals.
+Secondary use will be user referencing past workouts to gauge progress.
+>>>>>>> Stashed changes
 
 # Screenshot
 ![Alt text](./public/img/image-2.png)
@@ -20,6 +25,7 @@ Secondary use will be user referencing past workouts to gauge progress.
 - Express
 - Node.js
 - Mongoose & MongoDB
+<<<<<<< Updated upstream
 - **Button Effect Provided By:** https://www.codehim.com/collections/css-button-packs-with-hover-effects
 - **Background picture:**
  https://www.freepik.com/free-photos-vectors/gym-background
