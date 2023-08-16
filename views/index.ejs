@@ -1,13 +1,25 @@
 <%- include('./partials/header') %>
 
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
+<% if (user) { %>
+
+<h1>Get Me Fit</h1>
+
 <a href="/workouts">
   <img type="image" src="/img/weight.png" />
 </a>
-<a href="/workouts">
+<a href="/cardio">
   <img type="image" src="/img/cardio.png" />
 </a>
 
+<div class="foot-state">Fitness Tracking Made Easy</div>
+
+<% } else { %>
+
+<h1>Welcome to Get Me Fit!</h1>
+<div class="foot-state">Please log in to begin your workout...</div>
+
+<div class="foot-state">Fitness Tracking Made Easy</div>
+
+<% } %>
 
 <%- include('./partials/footer') %>

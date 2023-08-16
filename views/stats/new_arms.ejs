@@ -1,0 +1,73 @@
+<%- include('../partials/header') %>
+
+<h1>Add Set Info</h1>
+<form action="/workouts/<%= workoutId %>" method="POST">
+
+  <label for="type">Type: </label>
+  <select name="type" required>
+    <option value="" disabled selected>Select Type</option>
+    <option value="Standing Bicep Curls">Standing Bicep Curls</option>
+    <option value="Seated Bicep Curls">Seated Bicep Curls</option>
+    <option value="EZ Bar Preacher Curl">EZ Bar Preacher Curl</option>
+    <option value="Standing Cable Tricep Pushdown">Standing Cable Tricep Pushdown</option>
+    <option value="Dumbbell Tricep Kick Back">Dumbbell Tricep Kick Back</option>
+    <option value="Overhead Dumbbell Tricep Extensions">Overhead Dumbbell Tricep Extensions</option>
+    <option value="Barbell Skull Crusher">Barbell Skull Crusher</option>
+  </select>
+  <br />
+  <label for="weight">Weight: </label>
+  <select name="weight" required>
+    <option value="" disabled selected>Select Weight</option>
+    <option value="5">5 lbs</option>
+    <option value="10">10 lbs</option>
+    <option value="15">15 lbs</option>
+    <option value="20">20 lbs</option>
+    <option value="25">25 lbs</option>
+    <option value="30">30 lbs</option>
+    <option value="35">35 lbs</option>
+    <option value="40">40 lbs</option>
+    <option value="45">45 lbs</option>
+    <option value="50">50 lbs</option>
+    <option value="55">55 lbs</option>
+    <option value="60">60 lbs</option>
+    <option value="65">65 lbs</option>
+    <option value="70">70 lbs</option>
+    <option value="75">75 lbs</option>
+    <option value="80">80 lbs</option>
+    <option value="85">85 lbs</option>
+    <option value="90">90 lbs</option>
+    <option value="95">95 lbs</option>
+    <option value="100">100 lbs</option>
+    <option value="105">105 lbs</option>
+    <option value="110">110 lbs</option>
+    <option value="115">115 lbs</option>
+    <option value="120">120 lbs</option>
+    <option value="125">125 lbs</option>
+    <option value="130">130 lbs</option>
+    <option value="135">135 lbs</option>
+    <option value="140">140 lbs</option>
+    <option value="145">145 lbs</option>
+    <option value="150">150 lbs</option>
+    <!-- Add other weight options here -->
+  </select>
+  <br />
+  <label for="reps">Reps: </label>
+  <select name="reps" required>
+    <option value="" disabled selected>Select Reps</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+    <option value="25">25</option>
+    <option value="30">30</option>
+    <!-- Add other reps options here -->
+  </select>
+  <br />
+  <label for="notes">Set Notes: </label>
+  <input type="text" name="notes"/>
+  <br />
+  <input type="submit" value="Add Set" />
+  <input type="hidden" name="entryId" value="<%= workoutId %>">
+</form>
+
+<%- include('../partials/footer') %>
