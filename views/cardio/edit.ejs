@@ -1,4 +1,6 @@
-<h1>EDIT CARDIO PAGE</h1>
+<%- include('../partials/header') %>
+
+<h1 class="edit-cardio">Edit Cardio</h1>
 <br>
 
 <form action="/cardio/<%= editedCardio._id %>?_method=PUT" method="POST">
@@ -14,3 +16,5 @@
     </label><br>
     
     <button type="submit">Submit Changes</button>
+
+    <%- include('../partials/footer') %>

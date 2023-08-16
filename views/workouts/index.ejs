@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>Workout List</h2>
+<h2 class="work-list">Workout List</h2>
 
 <table>
 
@@ -24,7 +24,8 @@
           <td><%= f.workDate.toLocaleDateString() %></td>
           <td><a href="/workouts/<%= f._id %>">SELECT</a></td>
           <td><form action="/workouts/<%=f._id%>?_method=DELETE" class="delete-form" method="POST">
-            <button type="submit">Delete Workout</button></form></td>
+            <button class="del-button" type="submit">
+              <i class="fas fa-trash-alt"></i>
         </tr>
       <% } else {} %>
 

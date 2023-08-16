@@ -6,7 +6,7 @@
   <div>Date: <%= workout.workDate.toLocaleDateString() %></div>
 </section>
 <br>
-<h2>Workout Set</h2>
+<h2 class="work-set">Workout Set</h2>
 <br>
 <br>
 <table>
@@ -16,6 +16,7 @@
       <th>Weight</th>
       <th>Reps</th>
       <th>Notes</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -25,7 +26,7 @@
       <td><%= stat.weight %> </td>
       <td><%= stat.reps %></td>
       <td><%= stat.notes %></td>
-      <td><a href="/workouts/<%= stat._id %>/edit">Edit Workout</a>
+      <td><a href="/workouts/<%= stat._id %>/edit">Update Set</a>
     </tr>
     <% } %>
   </tbody>
