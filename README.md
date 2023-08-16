@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Get Me Fit
 
 Fitness app that allows user to record individual workouts. The user may choose between cardio or strength training workouts. The user will have the abillity to customize their workouts to achieve their fitness goals.
@@ -65,3 +66,5 @@ https://fontawesome.com/
 - As a user, I would like to have a a graph that shows my progress in conjunction to the workout data
 
 - 
+=======
+>>>>>>> Stashed changes
