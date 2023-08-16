@@ -90,17 +90,15 @@ img {
   border: none;
   border-radius: 5px;
   text-decoration: none;
-  position: absolute;
+  position: fixed; 
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
-
 .weight-training-btn:hover {
   background-color: rgb(138, 203, 77);
 }
-
 .cardio-training-btn {
   display: block;
   width: 100px;
@@ -113,13 +111,12 @@ img {
   border: none;
   border-radius: 5px;
   text-decoration: none;
-  position: absolute;
-  top: 40%;
+  position: fixed;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
-
 .cardio-training-btn:hover {
   background-color: rgb(138, 203, 77);
 }
@@ -131,7 +128,7 @@ img {
   justify-content: center;
   align-items: center; 
   width: 100%; 
-  position: absolute; 
+  position: fixed; 
   bottom: 75px; 
   padding: 10px 0; 
   text-align: center;
@@ -146,7 +143,7 @@ img {
   justify-content: center;
   align-items: center; 
   width: 100%; 
-  position: absolute; 
+  position: fixed; 
   bottom: 0; 
   padding: 10px 0; 
   font-size: larger;
