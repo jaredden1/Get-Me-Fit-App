@@ -5,7 +5,7 @@ const workoutSchema = new mongoose.Schema(
   {
     workType: {
       type: String,
-      enum: ["Chest", "Core", "Legs", "Shoulders", "Arms", "Back", "Full Body"],
+      enum: ["Chest", "Core", "Legs", "Shoulders", "Arms", "Back", "Body Weight"],
       required: true,
     },
     workNote: {
