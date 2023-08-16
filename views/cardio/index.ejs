@@ -21,7 +21,8 @@
       <td><%= cardio.createdAt.toLocaleDateString() %></td>
       <td><a href="/cardio/<%= cardio._id %>/edit">Update Cardio</a>
        <td><form action="cardio/<%=cardio._id%>?_method=DELETE" class="delete-form" method="POST">
-        <button class="del-button" type="submit">Delete Cardio</button></form></td>
+        <button class="del-button" type="submit">
+          <i class="fas fa-trash-alt"></i>
     </tr>
     <% }) %>
   </tbody>

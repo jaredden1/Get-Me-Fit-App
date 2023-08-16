@@ -19,7 +19,6 @@
 body {
   display: flex;
   flex-direction: column;
-  /* padding: 50px; */
   font: 14px Helvetica, Arial, sans-serif;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
@@ -353,4 +352,18 @@ tbody {
 
 .cardio-select:focus, .cardio-input:focus {
   outline: 2px solid orange;
+}
+
+/* Delete button with trash can icon */
+.del-button {
+  background-color: transparent; /* Transparent background */
+  border: none;
+  color: #ff4b5c; /* Red color for the icon */
+  padding: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.del-button:hover {
+  color: #e53945; /* Darker red on hover */
 }
