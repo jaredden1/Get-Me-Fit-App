@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Magz";
   src: url(../font/Magz.otf);
@@ -57,7 +58,7 @@ img {
   border-radius: 30px;
   padding: 0 0; 
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:active {
@@ -90,15 +91,23 @@ img {
   border: none;
   border-radius: 5px;
   text-decoration: none;
-  position: fixed; 
-  top: 30%;
+  position: absolute; 
+  top: 300px;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
 .weight-training-btn:hover {
   background-color: rgb(138, 203, 77);
+  transform: translate(-50%, -50%) scale(0.95);
 }
+
+.weight-training-btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .cardio-training-btn {
   display: block;
   width: 100px;
@@ -112,13 +121,49 @@ img {
   border-radius: 5px;
   text-decoration: none;
   position: fixed;
-  top: 30%;
+  top: 300px;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
 .cardio-training-btn:hover {
   background-color: rgb(138, 203, 77);
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.cardio-training-btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.create-workout-btn {
+  display: block;
+  width: 100px;
+  height: 48px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(243, 146, 71);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute; 
+  top: 535px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.create-workout-btn:hover {
+  background-color: rgb(138, 203, 77);
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.create-workout-btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 /* FOOTER - MID */
@@ -293,9 +338,11 @@ label {
 }
 
 #show-page {
-  background-color: rgba(200, 198, 198, 0.244);
-  padding: 1%;
-  margin: 75px;
+  background-color: rgba(234, 231, 231, 0.645);
+  width: 50%;
+  padding: 5px;
+  margin: 75px auto;
+  font-size: larger;
 }
 
 /* FORMS DROPDOWNS */
@@ -553,14 +600,14 @@ label {
 .del-button {
   background-color: transparent;
   border: none;
-  color: #fe6a01; 
+  color: #f88d40; 
   padding: 8px;
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .del-button:hover {
-  color: #ff0415; 
+  color: #ff0011; 
 }
 
 table {
@@ -600,14 +647,11 @@ a {
   transition: background-color 0.3s;
 }
 
-a:hover {
-  background-color: rgb(138, 203, 77);
-  color: #fff;
-}
-
 tbody {
   background-color: rgb(255, 255, 255, .4);
 }
+
+
 
 
 
