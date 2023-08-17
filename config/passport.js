@@ -5,10 +5,9 @@ const User = require('../models/user');
 passport.use(new GoogleStrategy(
     // Configuration object
     {
-        callbackURL: "/auth/google/redirect",
-		clientID: keys.google.clientID,
-        clientSecret: keys.google.clientSecret,
-        proxy: true
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
+      callbackURL: process.env.GOOGLE_CALLBACK
     },
     async function(accessToken, refreshToken, profile, cb) {
         try {
