@@ -22,11 +22,11 @@
       <td><%= cardio.duration %> minutes</td>
       <td><%= cardio.distance ? cardio.distance + ' miles' : 'N/A' %></td>
       <td><%= cardio.createdAt.toLocaleDateString() %></td>
-      <td><a href="/cardio/<%= cardio._id %>/edit">Update Cardio</a>
-      <td><form action="cardio/<%=cardio._id%>?_method=DELETE" class="delete-form" method="POST">
-      <button class="del-button" type="submit">
-        <i class="fas fa-trash-alt"></i>
-      </button> 
+      <td><a href="/cardio/<%= cardio._id %>/edit" class="table-btn">Update Cardio</a>
+       <td><form action="cardio/<%=cardio._id%>?_method=DELETE" class="delete-form" method="POST">
+        <button class="del-button" type="submit">
+          <i class="fas fa-trash-alt"></i>
+        </button> 
       </form>
     </tr>
     <% }) %>

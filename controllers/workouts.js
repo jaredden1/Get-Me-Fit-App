@@ -9,7 +9,6 @@ module.exports = {
   delete: deleteWorkout,
   edit: editWorkout,
   update
-
 };
 
 function newWorkout(req, res) {
