@@ -13,8 +13,6 @@
       <th></th>
     </tr>
   </thead>
-
-  
   <tbody>
     <% workouts.forEach(f=>{ %>
       <% if ( JSON.stringify(f.user) === JSON.stringify(user._id) ) { %>
@@ -32,9 +30,7 @@
       <% } else {} %>
 
     <% })%>
-    
-
-  </tbody>
+    </tbody>
 </table>
 
 <%- include('../partials/footer') %>
