@@ -9,7 +9,6 @@ module.exports = {
   delete: deleteWorkout,
   edit: editWorkout,
   update
-
 };
 
 function newWorkout(req, res) {
@@ -98,5 +97,4 @@ async function update(req, res) {
   } catch (err) {
     console.log(err)
   }
-
 }
