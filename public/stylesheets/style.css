@@ -1,8 +1,657 @@
+
+@font-face {
+  font-family: "Magz";
+  src: url(../font/Magz.otf);
+}
+
+.login {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 24px;
+  color: white;
+  background-color: rgb(243, 146, 71, 0);
+}
+
+.login img {
+  height: 30px;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  font: 14px Helvetica, Arial, sans-serif;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border-radius: 30px;
+}
+
+/* ALL BUTTONS */
+
+.center-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  width: 170px; 
+  height: 170px; 
+  margin: 55px;
+  text-align: center;
+  border-radius: 30px;
+  padding: 0 0; 
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:active {
+  transform: translateY(4px);
+}
+
+.button:hover {
+  box-shadow: 0 0 70px #f4a507; 
+  transform: translateY(-5px) scale(1.05); 
+}
+
+.button img {
+  width: 100%;
+  height: 100%;
+}
+
+.del-button {
+  color: #f4a507;
+}
+
+.weight-training-btn {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(243, 146, 71);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute; 
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.weight-training-btn:hover {
+  background-color: rgb(138, 203, 77);
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.weight-training-btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.cardio-training-btn {
+  display: block;
+  width: 100px;
+  height: 21px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(243, 146, 71);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cardio-training-btn:hover {
+  background-color: rgb(138, 203, 77);
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.cardio-training-btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.create-workout-btn {
+  display: block;
+  width: 100px;
+  height: 48px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(243, 146, 71);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute; 
+  top: 535px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.create-workout-btn:hover {
+  background-color: rgb(138, 203, 77);
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.create-workout-btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* FOOTER - MID */
+
+.mid-state {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%; 
+  position: fixed; 
+  top: 50%; 
+  padding: 10px 0; 
+  text-align: center;
+  font-size: 50px;
+  font-family: Magz;
+  background-color: rgb(243, 146, 71, .8);
+  color: rgb(248, 250, 248);
+  text-shadow: rgb(138, 203, 77) 5px 3px 2px;
+}
+
+.foot-state {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%; 
+  position: fixed; 
+  bottom: 75px; 
+  padding: 10px 0; 
+  text-align: center;
+  font-size: 50px;
+  font-family: Magz;
+  color: rgb(248, 250, 248);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.foot-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%; 
+  position: fixed; 
+  bottom: 0; 
+  padding: 10px 0; 
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+  color: #f4a507
+}
+
+/* ALL HEADERS */
+
+h1 {
+  text-align: center;
+  font-size: 125px;
+  font-family: Magz;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.add-cardio {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.add-set {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.work-set {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.all-cardio {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.edit-cardio {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.update-set {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.work-list {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+.work-routine {
+  text-align: center;
+  font-size: 85px;
+  font-family: Magz;
+  margin: 60px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: #f4a507 5px 3px 2px;
+}
+
+/* NAV BAR */
+
+nav {
+  background-color: rgb(243, 146, 71, .9);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav > a:hover:not(.active) {
+  color: rgb(252, 119, 3);
+  background-color: white;
+  border-radius: 50px;
+  
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+/* OTHER */
+
+label {
+  color: white;
+}
+
+#show-page {
+  background-color: rgba(234, 231, 231, 0.645);
+  width: 50%;
+  padding: 5px;
+  margin: 75px auto;
+  font-size: 20px;
+}
+
+/* FORMS DROPDOWNS */
+
+.workout-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.workout-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.workout-select, .workout-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  height: 40px; 
+  appearance: none; 
+}
+
+.workout-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.workout-button:hover {
+  background-color: #f4a507;
+}
+
+.workout-select:focus, .workout-input:focus {
+  outline: 2px solid orange;
+}
+
+.cardio-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cardio-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.cardio-select,
+.cardio-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  height: 40px; 
+  appearance: none; 
+}
+
+.cardio-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.cardio-button:hover {
+  background-color: #f4a507;
+}
+
+.cardio-select:focus, .cardio-input:focus {
+  outline: 2px solid orange;
+}
+
+.set-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.set-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.set-select,
+.set-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  margin: 0 auto;
+  height: 40px; 
+  appearance: none; 
+}
+
+.set-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.set-button:hover {
+  background-color: #f4a507;
+}
+
+.set-select:focus, .set-input:focus {
+  outline: 2px solid orange;
+}
+
+.cardio-edit-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cardio-edit-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.cardio-edit-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  height: 40px; 
+  appearance: none; 
+}
+
+.cardio-edit-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.cardio-edit-button:hover {
+  background-color: #f4a507;
+}
+
+.cardio-edit-input:focus {
+  outline: 2px solid orange;
+}
+
+.set-update-form {
+  background-color: rgb(255, 255, 255, .3); 
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.set-update-label {
+  display: block;
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.set-update-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 8px 0;
+  height: 40px; 
+  appearance: none; 
+}
+
+.set-update-button {
+  padding: 10px 20px;
+  background-color: rgb(138, 203, 77);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.set-update-button:hover {
+  background-color: #f4a507;
+}
+
+.set-update-input:focus {
+  outline: 2px solid orange;
+}
+
+/* Delete button with trash can icon */
+
+.del-button {
+  background-color: transparent;
+  border: none;
+  color: #f88d40; 
+  padding: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.del-button:hover {
+  color: #ff0011; 
+}
+
+table {
+  max-width: 200%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-size: 18px;
+  text-align: left;
+  background-color: rgba(232, 222, 222, 0.244);
+  padding: 1%;
+}
+
+th {
+  background-color: rgb(138, 203, 77);
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.delete-form {
+  display: inline-block;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: #167201;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
+
+tbody {
+  background-color: rgb(255, 255, 255, .4);
+}
+
+
+
+
+
