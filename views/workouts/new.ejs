@@ -1,7 +1,9 @@
 <%- include('../partials/header') %>
 
 <h2 class="work-routine">Create Workout Routine</h2>
+
 <form action="/workouts" method="POST" class="workout-form">
+  
   <label class="workout-label">Exercise: 
     <select name="workType" class="workout-select" required>
       <option value="">SELECT EXERCISE</option>
@@ -12,18 +14,21 @@
       <option value="Legs">Legs</option>
       <option value="Core">Core</option>
       <option value="Body Weight">Body Weight</option>
-      <!-- Add more options -->
       </select>
-  </label>
-  <br>
+  </label><br>
+
   <label class="workout-label">Notes: 
     <input type="text" name="workNote" class="workout-input" placeholder="Notes">
   </label><br>
+
   <label class="workout-label">Date: 
     <input type="datetime-local" name="workDate" class="workout-input">
   </label><br>
+
   <button type="submit" class="workout-button">Create Workout</button>
+
 </form>
+
 <p><%= errorMsg %></p>
 
 <%- include('../partials/footer') %>

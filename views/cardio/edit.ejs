@@ -7,14 +7,17 @@
     <label class="cardio-edit-label"> Activity:
         <input type="text" name="activity" class="cardio-edit-input" value="<%= editedCardio.activity %>">
     </label><br>
+
     <label class="cardio-edit-label"> Duration:
         <input type="number" min="0" name="duration" class="cardio-edit-input" value="<%= editedCardio.duration %>">
     </label><br>
+
     <label class="cardio-edit-label"> Distance:
         <input type="number" min="0" name="distance" class="cardio-edit-input" value="<%= editedCardio.distance %>">
     </label><br>
     
     <button type="submit" class="cardio-edit-button">Submit Changes</button>
+    
 </form>
 
     <%- include('../partials/footer') %>

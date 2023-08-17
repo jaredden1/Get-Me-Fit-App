@@ -6,13 +6,11 @@ module.exports = {
 
 async function create(req, res) {
   const workout = await Workout.findById(req.params.id);
-
   workout.progs.push(req.body);
   try {
     await workout.save();
   } catch (err) {
     console.log(err);
   }
-
   res.redirect(`/workouts/${workout._id}`);
 }

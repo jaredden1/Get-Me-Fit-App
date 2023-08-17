@@ -1,7 +1,9 @@
 <%- include('../partials/header') %>
 
 <h2 class="all-cardio">Cardio Workouts</h2>
+
 <table>
+
   <thead>
     <tr>
       <th>Activity</th>
@@ -12,6 +14,7 @@
       <th></th>
     </tr>
   </thead>
+
   <tbody>
     <% cardioList.forEach(cardio => { %>
     <tr>
@@ -20,14 +23,15 @@
       <td><%= cardio.distance ? cardio.distance + ' miles' : 'N/A' %></td>
       <td><%= cardio.createdAt.toLocaleDateString() %></td>
       <td><a href="/cardio/<%= cardio._id %>/edit">Update Cardio</a>
-       <td><form action="cardio/<%=cardio._id%>?_method=DELETE" class="delete-form" method="POST">
-        <button class="del-button" type="submit">
-          <i class="fas fa-trash-alt"></i>
-        </button> 
+      <td><form action="cardio/<%=cardio._id%>?_method=DELETE" class="delete-form" method="POST">
+      <button class="del-button" type="submit">
+        <i class="fas fa-trash-alt"></i>
+      </button> 
       </form>
     </tr>
     <% }) %>
   </tbody>
+  
 </table>
 
 <%- include('../partials/footer') %>

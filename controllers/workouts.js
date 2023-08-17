@@ -31,20 +31,16 @@ async function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === "") delete req.body[key];
   }
-
   req.body.user = req.user._id;
   req.body.userName = req.user.name;
   req.body.userAvatar = req.user.avatar;
-
   try {
-    console.log(req.body)
     await Workout.create(req.body);
     res.redirect("/workouts");
   } catch (err) {
     console.log(err);
     res.render("/workout/new", { title: "New Workout", errorMsg: err.message });
   }
-  console.log("This is the request body: ", req.body);
 }
 
 async function index(req, res) {
@@ -82,9 +78,7 @@ async function editWorkout(req, res) {
 async function update(req, res) {
   try {
     const workoutData = { ...req.body }
-    console.log(workoutData)
     const workouts = await Workout.find({});
-    console.log(workouts)
     const editedWorkout = await Stat.findById(req.params.id)
     editedWorkout.type = workoutData.type
     editedWorkout.weight = workoutData.weight
@@ -92,11 +86,8 @@ async function update(req, res) {
     editedWorkout.notes = workoutData.notes
     editedWorkout.entryId = workoutData.entryId
     await editedWorkout.save()
-
     res.redirect(`/workouts/${workoutData.entryId}`)
-    
   } catch (err) {
     console.log(err)
   }
-
 }

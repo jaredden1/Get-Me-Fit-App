@@ -39,13 +39,13 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-    try {
-      const cardio = await Cardio.findById(req.params.id);
-      res.render("cardio/show", { title: "Cardio Detail", cardio });
-    } catch (err) {
-      console.log(err);
-      res.send(err);
-    }
+  try {
+    const cardio = await Cardio.findById(req.params.id);
+    res.render("cardio/show", { title: "Cardio Detail", cardio });
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
 }
   
 async function deleteCardio(req, res) {
@@ -71,21 +71,16 @@ async function editCardio(req, res) {
   }
 }
 
-
 async function update(req, res) {
   try {
     const cardioData = { ...req.body }
-    console.log(cardioData)
     const cardio = await Cardio.find({});
-    console.log(cardio._id)
     const editedCardio = await Cardio.findById(req.params.id)
     editedCardio.activity = cardioData.activity
     editedCardio.duration = cardioData.duration
     editedCardio.distance = cardioData.distance
     await editedCardio.save()
-
     res.redirect("/cardio")
-    
   } catch (err) {
     console.log(err)
   }

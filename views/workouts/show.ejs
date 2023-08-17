@@ -6,9 +6,10 @@
   <div>Workout: <%= workout.workType %></div>
   <div>Date: <%= workout.workDate.toLocaleDateString() %></div>
   <div>Notes: <%= workout.workNote %></div>
-</section>
-<br>
+</section><br>
+
 <table>
+
   <thead>
     <tr>
       <th>Type</th>
@@ -18,6 +19,7 @@
       <th></th>
     </tr>
   </thead>
+
   <tbody>
     <% for (let stat of stats) { %>
     <tr>
@@ -29,44 +31,37 @@
     </tr>
     <% } %>
   </tbody>
-  </table>
+
+</table>
+
   <% if (workout.workType === "Chest") { %>
   <a href="/workouts/<%= workout._id %>/stats/new_chest">
-    <button type="submit" class="create-workout-btn">Create New Workout</button>
-</a>
+    <button type="submit" class="create-workout-btn">Add New Set</button></a>
 
   <% } else if (workout.workType === "Core") { %>
   <a href="/workouts/<%= workout._id %>/stats/new_core">
-    <button type="submit" class="create-workout-btn">Create New Workout</button>
-</a>
+    <button type="submit" class="create-workout-btn">Add New Set</button></a>
 
   <% } else if (workout.workType === "Legs") { %>
   <a href="/workouts/<%= workout._id %>/stats/new_legs">
-    <button type="submit" class="create-workout-btn">Create New Workout</button>
-</a>
+    <button type="submit" class="create-workout-btn">Add New Set</button></a>
 
   <% } else if (workout.workType === "Shoulders") { %>
   <a href="/workouts/<%= workout._id %>/stats/new_shoulders">
-    <button type="submit" class="create-workout-btn">Create New Workout</button>
-</a>
+    <button type="submit" class="create-workout-btn">Add New Set</button></a>
 
   <% } else if (workout.workType === "Arms") { %>
   <a href="/workouts/<%= workout._id %>/stats/new_arms">
-    <button type="submit" class="create-workout-btn">Create New Workout</button>
-  </a>
+    <button type="submit" class="create-workout-btn">Add New Set</button></a>
 
   <% } else if (workout.workType === "Back") { %>
   <a href="/workouts/<%= workout._id %>/stats/new_back">
-    <button type="submit" class="create-workout-btn">Create New Workout</button>
-</a>
+    <button type="submit" class="create-workout-btn">Add New Set</button></a>
 
   <% } else if (workout.workType === "Body Weight") { %>
   <a href="/workouts/<%= workout._id %>/stats/new_body">
-    <button type="submit" class="create-workout-btn">Create New Workout</button>
-</a>
+    <button type="submit" class="create-workout-btn">Add New Set</button></a>
 
   <% } %>
 
-
 <%- include('../partials/footer') %>
-

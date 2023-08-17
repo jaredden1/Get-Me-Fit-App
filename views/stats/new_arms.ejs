@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1 class="add-set">Add Set info</h1>
+
 <form action="/workouts/<%= workoutId %>" method="POST" class="set-form">
 
   <label for="type" class="set-label">Type: </label>
@@ -14,7 +15,8 @@
     <option value="Overhead Dumbbell Tricep Extensions">Overhead Dumbbell Tricep Extensions</option>
     <option value="Barbell Skull Crusher">Barbell Skull Crusher</option>
   </select>
-  <br />
+  <br>
+
   <label for="weight" class="set-label">Weight: </label>
   <select name="weight" class="set-select" required>
     <option value="" disabled selected>Select Weight</option>
@@ -48,9 +50,8 @@
     <option value="140">140 lbs</option>
     <option value="145">145 lbs</option>
     <option value="150">150 lbs</option>
-    <!-- Add other weight options here -->
-  </select>
-  <br />
+  </select><br>
+
   <label for="reps" class="set-label">Reps: </label>
   <select name="reps" class="set-select" required>
     <option value="" disabled selected>Select Reps</option>
@@ -60,14 +61,14 @@
     <option value="20">20</option>
     <option value="25">25</option>
     <option value="30">30</option>
-    <!-- Add other reps options here -->
-  </select>
-  <br />
+  </select><br>
+
   <label for="notes" class="set-label">Set Notes: </label>
   <input type="text" name="notes" class="set-input" placeholder="Notes"/>
-  <br />
+  <br>
   <input type="submit" value="Add Set" class="set-button" />
   <input type="hidden" name="entryId" value="<%= workoutId %>">
+
 </form>
 
 <%- include('../partials/footer') %>

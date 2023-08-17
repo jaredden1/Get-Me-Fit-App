@@ -3,29 +3,26 @@
 <h2 class="update-set">Update Set:</h2>
 
 <form action="/workouts/<%= editedWorkout._id %>?_method=PUT" method="POST" class="set-update-form">
-  <label class="set-update-label">
-    Type:
+  <label class="set-update-label">Type:
     <input type="text" name="type" class="set-update-input" value="<%= editedWorkout.type %>" />
-  </label><br />
+  </label><br>
   
-  <label class="set-update-label">
-    Weight:
+  <label class="set-update-label">Weight:
     <input type="number" min="0" name="weight" class="set-update-input" value="<%= editedWorkout.weight %>" />
-  </label><br />
+  </label><br>
   
-  <label class="set-update-label">
-    Reps:
+  <label class="set-update-label">Reps:
     <input type="number" min="0" name="reps" class="set-update-input" value="<%= editedWorkout.reps %>" />
-  </label><br />
+  </label><br>
   
-  <label class="set-update-label">
-    Notes:
+  <label class="set-update-label">Notes:
     <input type="text" name="notes" class="set-update-input" value="<%= editedWorkout.notes %>" />
-  </label><br />
+  </label><br>
   
   <input type="hidden" name="entryId" value="<%= editedWorkout.entryId %>" />
 
   <button type="submit" class="set-update-button">Submit Changes</button>
+  
 </form>
 
 <%- include('../partials/footer') %>

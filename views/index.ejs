@@ -1,7 +1,8 @@
 <%- include('./partials/header') %>
-<% if(user) { %>
-<h1><%= title %></h1>
 
+<% if(user) { %>
+
+<h1><%= title %></h1>
 
 <div class="button-container">
   <a href="/workouts" class="button">
@@ -10,16 +11,14 @@
   <a href="/cardio" class="button">
     <img src="/img/cardio.png" alt="Cardio Icon" />
   </a>
-</div>
-<br>
-<div class="foot-state">Fitness Tracking Made Easy</div>
-<br>
+</div><br>
+
+<div class="foot-state">Fitness Tracking Made Easy</div><br>
 
 <% } else { %>
 
 <h1><%= title %></h1>
 <div class="mid-state">Please log in to begin your workout...</div>
-
 <div class="foot-state">Fitness Tracking Made Easy</div>
 
 <% } %>
