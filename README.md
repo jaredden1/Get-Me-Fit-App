@@ -35,7 +35,7 @@ https://www.dafont.com/magz.font
 ### Trello Board
 - https://trello.com/b/q0CkniDD/p2-workflow 
 ### App Link
-- https://get-me-fit-dev-2b4dfc1e9975.herokuapp.com/
+- https://get-fit-tracker-1b767e883070.herokuapp.com/
 
 
 1. Open app: Home page, login to your google account, choose workout through icon images → Add Workout page
